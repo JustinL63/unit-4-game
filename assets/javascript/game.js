@@ -1,5 +1,5 @@
-var randomGoal = 0;
-var crystalValue = [0, 0, 0, 0];
+var randomGoal;
+var crystalValue = [];
 var totalScore = 0;
 var wins = 0;
 var losses = 0;
@@ -13,7 +13,7 @@ function return_crystalValue() {
 }
 
 function generate_CrstaylValue() {
-    for (let i = 0; i < crystalValue.length; i++) {
+    for (let i = 0; i < 4; i++) {
         crystalValue[i] = return_crystalValue();
     }
 }
@@ -27,7 +27,6 @@ function onClick(buttonClick) {
             losses++
         new_Game();
     }
-
 }
 
 function new_Game() {
