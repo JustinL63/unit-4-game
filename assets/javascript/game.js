@@ -21,10 +21,13 @@ function generate_CrstaylValue() {
 function onClick(buttonClick) {
     totalScore += crystalValue[buttonClick];
     if (totalScore >= randomGoal) { // game over
-        if (totalScore === randomGoal) //you won this game
-            wins++ //add one win to win tally
-        else losses++ // ad one loss to losses tally
+        if (totalScore === randomGoal) // you won this game
+            wins++
+        else
+            losses++
+        new_Game();
     }
+
 }
 
 function new_Game() {
