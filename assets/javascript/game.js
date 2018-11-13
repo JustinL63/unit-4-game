@@ -5,17 +5,20 @@ var wins = 0;
 var losses = 0;
 
 function update_randomGoal() {
-    randomGoal = Math.floor(Math.Random() * 101) + 19;
+    randomGoal = Math.floor(Math.random() * 101) + 19;
 }
 
 function return_crystalValue() {
-    return Math.floor(Math.Random() * 11) + 1;
+    return Math.floor(Math.random() * 11) + 1;
 }
 
 function generate_CrstaylValue() {
     for (let i = 0; i < 4; i++) {
         crystalValue[i] = return_crystalValue();
+        var newDiv = $(".Crystals");
+       var assignedVale = $("<div>" + crystalValue[i] + "</div>");
     }
+
 }
 
 function onClick(buttonClick) {
@@ -30,7 +33,7 @@ function onClick(buttonClick) {
 }
 
 function new_Game() {
-    generate_randomGoal();
+    update_randomGoal();
     generate_CrstaylValue();
     updateScreen();
 }
@@ -38,3 +41,8 @@ function new_Game() {
 function updateScreen() {
 
 }
+
+$(document).ready(function(){
+    new_Game();
+    console.log("this is a test");
+});

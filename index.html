@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Crystal Collector Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <h1>The Crystal Collector Game</h1>
+
+    <div class="instructions">
+        <p>Click on a Crystal to determine the random value between 1 and 12. Each Crystal is given a random value at
+            the start of each new game.
+            The goal is to click each the crystals so that the added value is equal to random goal generated at the
+            begining of each game. If the total value clicked
+            is equal to the random goal, then you win. If it exceed the goal, you lost the game and begin again.
+        </p>
+        <div class="container">
+
+
+        </div>
+
+        <div id="crystalOne">
+            <button type="button">Crystal 1</button>
+        </div>
+        <div id="crystalTwo">
+            <button type="button">Crystal 2</button>
+        </div>
+        <div id="crystalThree">
+            <button type="button">Crystal 3</button>
+        </div>
+        <div id="crystalFour">
+            <button type="button">Crystal 4</button>
+        </div>
+
+        <div id="generatedGoal">
+            <p>Goal</p>
+        </div>
+
+        <div id="yourScore">
+            <p>Your Score</p>
+        </div>
+
+        <div id="wins">
+            <p>Your Wins</p>
+        </div>
+
+        <div id="losses">
+            <p>Losses</p>
+        </div>
+
+    </div>
+
+    <script src="assets/javascript/game.js"></script>
+</body>
+
+</html>
