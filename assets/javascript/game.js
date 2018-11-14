@@ -15,8 +15,10 @@ function return_crystalValue() {
 function generate_CrstaylValue() {
     for (let i = 0; i < 4; i++) {
         crystalValue[i] = return_crystalValue();
-        var newDiv = $(".Crystals");
-       var assignedVale = $("<div>" + crystalValue[i] + "</div>");
+        $("#crystalOne").html(crystalValue[0]);
+        $("#crystalTwo").html(crystalValue[1]);
+        $("#crystalThree").html(crystalValue[2]);
+        $("#cyrstalFour").html(crystalValue[3]);
     }
 
 }
@@ -30,6 +32,7 @@ function onClick(buttonClick) {
             losses++
         new_Game();
     }
+
 }
 
 function new_Game() {
@@ -42,7 +45,31 @@ function updateScreen() {
 
 }
 
+
+
+$("#crystalOne").on("click", function(){
+    (totalScore += crystalValue[0]);
+    console.log(totalScore);
+});
+
+$("#crystalTwo").on("click", function(){
+    (totalScore += crystalValue[1]);
+    console.log(totalScore);
+});
+
+$("#crystalThree").on("click", function(){
+    (totalScore += crystalValue[2]);
+    console.log(totalScore);
+});
+
+$("#crystalFour").on("click", function(){
+    (totalScore += crystalValue[3]);
+    console.log(totalScore);
+});
+
 $(document).ready(function(){
     new_Game();
+    onClick();
     console.log("this is a test");
+    console.log(crystal)
 });
