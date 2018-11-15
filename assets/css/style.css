@@ -1,21 +1,30 @@
-.instructions {
+h1{
+    font-size: 65px;
     text-align: center;
+    color: gold;
+    background-color: maroon;
+    padding: 52px;
 }
 
+.instructions {
+}
+.column {
+    float: left;
+    width: 22%;
+    padding: 5px;
+  }
 
 
 body {
 background-color: blue;
+line-height: 30px;
+font-size: 20px;
+}
+
+.container {
+    float: left;
 }
 
 .crystals {
 float: right;
-
-
-}
-
-#crystalOne {
-height: 100px;
-width: 100px;
-
 }
