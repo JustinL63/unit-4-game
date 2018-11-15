@@ -1,0 +1,21 @@
+.instructions {
+    text-align: center;
+}
+
+
+
+body {
+background-color: blue;
+}
+
+.crystals {
+float: right;
+
+
+}
+
+#crystalOne {
+height: 100px;
+width: 100px;
+
+}

@@ -28,17 +28,20 @@ $(document).ready(function () {
         //check to see if total score is the same as the target number
         if (totalScore >= randomGoal) { // game over
             if (totalScore === randomGoal) {// you won this game
-                console.log("You won the game");
+                alert("You won the game");
                 wins++;
+                $("#wins").text ("Wins " + wins);
             } else {
-                console.log(("you lost the game"));
+                alert(("You lost the game"));
                 losses++;
+                $("#losses").text ("Losses " + losses);
                 new_Game();
             }
         }
     }
 
     function new_Game() {
+        totalScore = 0;
         //Get a new random number to match
         update_randomGoal();
         //get random numbers for every crystal
@@ -46,8 +49,10 @@ $(document).ready(function () {
         crystalTwoValue = Math.floor(Math.random() * 12) + 1;
         crystalThreeValue = Math.floor(Math.random() * 12) + 1;
         crystalFourValue = Math.floor(Math.random() * 12) + 1;
+
         //* **ToDo** build out this function
         updateScreen();
+        $("#generatedGoal").text ("Goal " + randomGoal);
 
     }
 
@@ -64,6 +69,7 @@ $(document).ready(function () {
         //call a function to check the values for a match or not
         //run scorecheck on each crystal
         scoreCheck(totalScore);
+        $("#yourScore").text ("Your Score " + totalScore);
 
     });
 
@@ -72,18 +78,24 @@ $(document).ready(function () {
         (totalScore += crystalTwoValue);
         // console.log(totalScore);
         scoreCheck(totalScore);
+        $("#yourScore").text ("Your Score " + totalScore);
+
     });
     ////click on this and it will update the total score with the random assigned value to crystal 3
     $("#crystalThree").on("click", function () {
         (totalScore += crystalThreeValue);
         // console.log(totalScore);
         scoreCheck(totalScore);
+        $("#yourScore").text ("Your Score " + totalScore);
+
     });
     //click on this and it will update the total score with the random assigned value to crystal 4
     $("#crystalFour").on("click", function () {
         (totalScore += crystalFourValue);
         // console.log(totalScore);
         scoreCheck(totalScore);
+        $("#yourScore").text ("Your Score " + totalScore);
+
 
     });
 
